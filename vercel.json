@@ -5,7 +5,7 @@
       "src": "zhipu.py", 
       "use": "@vercel/python",
       "config": {
-        "runtime": "python3.10" // 明确指定 Python 3.10
+        "runtime": "python3.10"
       }
     }
   ],
@@ -15,7 +15,7 @@
       "dest": "zhipu.py"
     },
     {
-      "src": "/v1/models", // 添加对 /v1/models 的明确路由
+      "src": "/v1/models",
       "dest": "zhipu.py"
     },
     {
