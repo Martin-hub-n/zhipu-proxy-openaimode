@@ -5,7 +5,7 @@ from flask import Response
 
 app = Flask(__name__)
 CORS(app) 
-client = ZhipuAI(api_key="")
+client = ZhipuAI()
 import json
 @stream_with_context
 @app.route('/v1/chat/completions', methods=['POST'])
