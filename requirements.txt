@@ -1,0 +1,3 @@
+zhipuai
+flask
+flask_cors
