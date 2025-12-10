@@ -3,10 +3,21 @@
   "builds": [
     {
       "src": "zhipu.py", 
-      "use": "@vercel/python"
+      "use": "@vercel/python",
+      "config": {
+        "runtime": "python3.10" // 明确指定 Python 3.10
+      }
     }
   ],
   "routes": [
+    {
+      "src": "/v1/chat/completions",
+      "dest": "zhipu.py"
+    },
+    {
+      "src": "/v1/models", // 添加对 /v1/models 的明确路由
+      "dest": "zhipu.py"
+    },
     {
       "src": "/(.*)",
       "dest": "zhipu.py"
